@@ -1,0 +1,7 @@
+{
+  "name": "GlowBeauty BD - Premium Cosmetics Store",
+  "description": "A fully responsive, feature-rich e-commerce platform for cosmetics in Bangladesh, featuring AI-powered product assistance, multi-payment gateway support (bKash/Nagad), and a robust admin dashboard.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
