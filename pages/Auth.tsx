@@ -59,11 +59,11 @@ const Auth: React.FC = () => {
 
           <div className="grid grid-cols-2 gap-4">
             <button onClick={() => handleDemoLogin('user')} className="flex flex-col items-center p-3 border border-gray-100 rounded-xl hover:bg-gray-50 transition-colors">
-              <span className="text-xs font-bold">Demo User</span>
+              <span className="text-xs font-bold">User</span>
             </button>
             <button onClick={() => handleDemoLogin('admin')} className="flex flex-col items-center p-3 bg-gray-900 text-white rounded-xl hover:bg-rose-600 transition-colors">
               <ShieldCheck className="h-4 w-4 mb-1" />
-              <span className="text-xs font-bold">Demo Admin</span>
+              <span className="text-xs font-bold">Admin</span>
             </button>
           </div>
 
