@@ -17,7 +17,7 @@ const Home: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
               <div className="max-w-lg space-y-6 text-white animate-fade-in-up">
-                <span className="inline-block bg-rose-500 text-white px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Eid Collection 2024</span>
+                <span className="inline-block bg-rose-500 text-white px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Eid Collection 2026</span>
                 <h1 className="text-4xl md:text-6xl font-serif font-bold leading-tight">Glow From Within This Season</h1>
                 <p className="text-lg text-gray-200">Discover premium international cosmetics with authentic guarantee and doorstep delivery across Bangladesh.</p>
                 <div className="flex space-x-4">
