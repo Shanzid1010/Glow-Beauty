@@ -10,6 +10,7 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import OrderSuccess from './pages/OrderSuccess';
 import AdminDashboard from './pages/Admin/Dashboard';
+import Auth from './pages/Auth';
 import { Facebook, Instagram, Twitter, Youtube, MapPin, Phone, Mail, ArrowUp } from 'lucide-react';
 
 const ScrollToTop = () => {
@@ -107,6 +108,7 @@ const App: React.FC = () => {
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/order-success/:id" element={<OrderSuccess />} />
               <Route path="/admin" element={<AdminDashboard />} />
+              <Route path="/auth" element={<Auth />} />
               <Route path="*" element={<Home />} />
             </Routes>
           </main>

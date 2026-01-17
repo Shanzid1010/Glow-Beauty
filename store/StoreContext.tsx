@@ -1,8 +1,10 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { CartItem, Product, User, Order } from '../types';
+import { MOCK_PRODUCTS } from '../constants';
 
 interface StoreContextType {
+  products: Product[];
   cart: CartItem[];
   wishlist: string[];
   user: User | null;
@@ -14,11 +16,19 @@ interface StoreContextType {
   setUser: (user: User | null) => void;
   clearCart: () => void;
   addOrder: (order: Order) => void;
+  addProduct: (product: Product) => void;
+  updateProduct: (product: Product) => void;
+  deleteProduct: (id: string) => void;
 }
 
 const StoreContext = createContext<StoreContextType | undefined>(undefined);
 
 export const StoreProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [products, setProducts] = useState<Product[]>(() => {
+    const saved = localStorage.getItem('products');
+    return saved ? JSON.parse(saved) : MOCK_PRODUCTS;
+  });
+
   const [cart, setCart] = useState<CartItem[]>(() => {
     const saved = localStorage.getItem('cart');
     return saved ? JSON.parse(saved) : [];
@@ -38,6 +48,10 @@ export const StoreProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     const saved = localStorage.getItem('orders');
     return saved ? JSON.parse(saved) : [];
   });
+
+  useEffect(() => {
+    localStorage.setItem('products', JSON.stringify(products));
+  }, [products]);
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -105,8 +119,13 @@ export const StoreProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   const clearCart = () => setCart([]);
   const addOrder = (order: Order) => setOrders(prev => [order, ...prev]);
 
+  const addProduct = (p: Product) => setProducts(prev => [p, ...prev]);
+  const updateProduct = (p: Product) => setProducts(prev => prev.map(item => item.id === p.id ? p : item));
+  const deleteProduct = (id: string) => setProducts(prev => prev.filter(p => p.id !== id));
+
   return (
     <StoreContext.Provider value={{ 
+      products,
       cart, 
       wishlist, 
       user, 
@@ -117,7 +136,10 @@ export const StoreProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       toggleWishlist, 
       setUser,
       clearCart,
-      addOrder
+      addOrder,
+      addProduct,
+      updateProduct,
+      deleteProduct
     }}>
       {children}
     </StoreContext.Provider>
