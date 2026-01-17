@@ -26,7 +26,7 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <div className="space-y-6">
-          <Link to="/" className="text-3xl font-serif font-bold text-rose-600">GlowBeauty</Link>
+          <Link to="/" className="text-3xl font-serif font-bold text-rose-600">Shanzid Beauty BD</Link>
           <p className="text-gray-500 text-sm leading-relaxed">
             Bangladesh's most trusted premium cosmetics destination. We bring you authentic beauty products from across the globe, right to your doorstep.
           </p>
@@ -65,7 +65,7 @@ const Footer = () => (
           <ul className="space-y-4 text-sm text-gray-500 font-medium">
             <li className="flex items-start space-x-3">
               <MapPin className="h-5 w-5 text-rose-500 flex-shrink-0" />
-              <span>Level 4, Jamuna Future Park, Dhaka, Bangladesh</span>
+              <span>Centre Point, Dhaka, Bangladesh</span>
             </li>
             <li className="flex items-center space-x-3">
               <Phone className="h-5 w-5 text-rose-500 flex-shrink-0" />
@@ -73,14 +73,14 @@ const Footer = () => (
             </li>
             <li className="flex items-center space-x-3">
               <Mail className="h-5 w-5 text-rose-500 flex-shrink-0" />
-              <span>support@glowbeauty.com.bd</span>
+              <span>support@shanzidbeautybd.com.bd</span>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="pt-10 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p className="text-xs text-gray-400">© 2024 GlowBeauty BD. All rights reserved. Designed with love in Dhaka.</p>
+        <p className="text-xs text-gray-400">© 2026 Shanzid Beauty BD. All rights reserved. Designed by Md Shanzid Hossain.</p>
         <div className="flex items-center space-x-4 opacity-50 grayscale hover:grayscale-0 transition-all">
           <img src="https://www.logo.wine/a/logo/BKash/BKash-Logo.wine.svg" className="h-8" alt="bKash" />
           <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8b/Nagad_Logo.svg/1200px-Nagad_Logo.svg.png" className="h-6" alt="Nagad" />
